@@ -1,13 +1,20 @@
+html{
+    min-height:100vh;
+    min-width:100vw;
+}
 body{
     background-image: url("./Pictures/Background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center 75%;
+    background-position: center 70%;
     overflow-y: hidden;
+    overflow-x: hidden;
+    min-height: 100vh;
+    min-width: 100vw;
 }
 .stripes{
-    min-height: 100%;
-    min-width: 100%;
+    min-height: 100vh;
+    min-width: 100vw;
     display: block;
     position: relative;
 }
@@ -24,58 +31,9 @@ body{
     position: absolute;
     z-index: -2;
 }
-nav{
-    text-align: right;
-    padding-top: 40px;
-    padding-bottom: 30px;
-    padding-right: 15px;
-    position:absolute;
-    min-width:100%;
-    z-index:0;
-}
-nav a{
-    color: black;
-    margin: 22px;
-    font-family:arial;
-    font-size: 15px;
-    font-weight: 550;
-    border-bottom: 4px solid rgba(0, 0, 0, 0);
-    transition: border 0.5s ease;
-}
-nav a:hover{
-    text-decoration:none;
-    color: black;
-    border-bottom: 4px solid rgba(0, 0, 0, 1);
-}
-.active{
-    border-bottom: 4px solid rgba(0, 0, 0, 1);
-}
-#first{
-    animation: dropFade 2.0s 1;
-}
-#second{
-    animation: dropFade 2.15s 1;
-}
-#third{
-    animation: dropFade 2.3s 1;
-}
-#fourth{
-    animation: dropFade 2.45s 1;
-}
-#fifth{
-    animation: dropFade 2.6s 1;
-}
-#sixth{
-    animation: dropFade 2.75s 1;
-}
-@keyframes dropFade{
-    0%{opacity: 0;margin-bottom:20px;}
-    80%{opacity: 0;margin-bottom:20px;}
-    100%{opacity:1;}
-}
 .gray{
-    min-height: 100%;
-    min-width: 100%;
+    min-height: 100vh;
+    min-width: 100vw;
     display: block;
     position: relative;
 }
@@ -105,19 +63,87 @@ nav a:hover{
 }
 .scroll{
     position:absolute;
-    min-height:100%;
+    min-width:100vw;
+    min-height:100vh;
+    max-height:100vh;
+    overflow-y:scroll;
+}
+.nav-wrap{
+    position:absolute;
+    min-height:100vh;
     width:96%;
     margin-left:2%;
-    margin-right:2%
+    margin-right:2%;
+    z-index:-1;
+}
+.container{
+    padding:0 !important;
+    margin:0 !important;
+    border:0 !important;
+    min-width:100%;
+}
+#nav{
+    text-align: right;
+    min-height:15%;
+    padding:0 !important;
+    margin:0 !important;
+    position:relative;
+    width:100%;
+    z-index:5;
+}
+.col-auto{
+    padding:0 !important;
+    margin:0 !important;
+    border:0 !important;
+}
+#nav a{
+    color: black;
+    display:block;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 45px;
+    font-family:arial;
+    font-size: 15px;
+    font-weight: 550;
+    border-bottom: 4px solid rgba(0, 0, 0, 0);
+    transition: border 0.5s ease;
+}
+#nav a:hover{
+    text-decoration:none;
+    color: black;
+    border-bottom: 4px solid rgba(0, 0, 0, 1);
+}
+.active{
+    border-bottom: 4px solid rgba(0, 0, 0, 1) !important;
+}
+#first{
+    animation: dropFade 2.0s 1;
+}
+#second{
+    animation: dropFade 2.15s 1;
+}
+#third{
+    animation: dropFade 2.3s 1;
+}
+#fourth{
+    animation: dropFade 2.45s 1;
+}
+#fifth{
+    animation: dropFade 2.6s 1;
+}
+#sixth{
+    animation: dropFade 2.75s 1;
+}
+@keyframes dropFade{
+    0%{opacity: 0;margin-top:10px;}
+    80%{opacity: 0;margin-top:10px;}
+    100%{opacity:1; margin-top: 45px;}
 }
 .center{
-    position:absolute;
-    min-width:100%;
-    text-align:center;
-    top: 50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    z-index:1;
+    text-align:center;   
+}
+#estes-wrap{
+    margin-top:45vh;
 }
 #estes{
     color:white;
@@ -128,4 +154,15 @@ nav a:hover{
 }
 #estes:hover{
     text-decoration:none;
+}
+#music-wrap{
+    color:white;
+    margin-top: 50vh;
+}
+#july-text{
+    font-size:5vh;
+    font-weight: 700;
+}
+#july-pic{
+    max-width: 25em;
 }
