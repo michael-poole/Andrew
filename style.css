@@ -1,0 +1,131 @@
+body{
+    background-image: url("./Pictures/Background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 75%;
+    overflow-y: hidden;
+}
+.stripes{
+    min-height: 100%;
+    min-width: 100%;
+    display: block;
+    position: relative;
+}
+.stripes::after{
+    content: "";
+    background-image: url("./Pictures/Stripes.png");
+    background-size: 100px 100px;
+    background-repeat: repeat;
+    opacity: 0.03;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -2;
+}
+nav{
+    text-align: right;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    padding-right: 15px;
+    position:absolute;
+    min-width:100%;
+    z-index:0;
+}
+nav a{
+    color: black;
+    margin: 22px;
+    font-family:arial;
+    font-size: 15px;
+    font-weight: 550;
+    border-bottom: 4px solid rgba(0, 0, 0, 0);
+    transition: border 0.5s ease;
+}
+nav a:hover{
+    text-decoration:none;
+    color: black;
+    border-bottom: 4px solid rgba(0, 0, 0, 1);
+}
+.active{
+    border-bottom: 4px solid rgba(0, 0, 0, 1);
+}
+#first{
+    animation: dropFade 2.0s 1;
+}
+#second{
+    animation: dropFade 2.15s 1;
+}
+#third{
+    animation: dropFade 2.3s 1;
+}
+#fourth{
+    animation: dropFade 2.45s 1;
+}
+#fifth{
+    animation: dropFade 2.6s 1;
+}
+#sixth{
+    animation: dropFade 2.75s 1;
+}
+@keyframes dropFade{
+    0%{opacity: 0;margin-bottom:20px;}
+    80%{opacity: 0;margin-bottom:20px;}
+    100%{opacity:1;}
+}
+.gray{
+    min-height: 100%;
+    min-width: 100%;
+    display: block;
+    position: relative;
+}
+.gray::after{
+    content: "";
+    background-color: #31353D;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    -webkit-animation-duration: 3s;animation-duration: 3s;
+    -webkit-animation-fill-mode: both;animation-fill-mode: both;
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+@-webkit-keyframes fadeOut {
+   0% {opacity: 1;}
+   30% {opacity: 1;}
+   100% {opacity: 0;}
+}
+@keyframes fadeOut {
+   0% {opacity: 1;}
+   30% {opacity: 1;}
+   100% {opacity: 0;}
+}
+.scroll{
+    position:absolute;
+    min-height:100%;
+    width:96%;
+    margin-left:2%;
+    margin-right:2%
+}
+.center{
+    position:absolute;
+    min-width:100%;
+    text-align:center;
+    top: 50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    z-index:1;
+}
+#estes{
+    color:white;
+    font-size:3.3em;
+    text-shadow: -1px 3px #000000;
+    font-family:'Raleway', sans-serif;
+    letter-spacing: 20px;
+}
+#estes:hover{
+    text-decoration:none;
+}
